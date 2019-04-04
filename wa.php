@@ -1,8 +1,8 @@
 <?php
 echo "COPYRIGHT : SGB TEAM\n\n";
-echo "Nomor Target?\nInput : ";
+echo " \e[92mNomor Target?\nInput : ";
 $nomer = trim(fgets(STDIN));
-if(strlen($nomer)==11){
+if(strlen($nomer)==11){.
 	$nomer = str_replace("0","62".$nomer);
 }elseif(strlen($nomer)>12){
 	$nomer = str_replace("62","0",$nomer);
@@ -51,6 +51,6 @@ Cookie: identity=".$rand1."; browser_id=".$rand2."; _ga=GA1.2.1024758930.1531960
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $ar);
 	$asw = curl_exec($ch);
 	curl_close($ch);
-	print $a.$nomer." [Sending]\n";
+	print $a.$nomer." \e[93m[Sending]\n";
 }
 
